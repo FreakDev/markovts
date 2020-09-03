@@ -1,0 +1,27 @@
+{
+  "name": "markovts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha -r ts-node/register test/**/*.ts",
+    "build": "tsc --declaration",
+    "setup": "node setup.js ./lib index memory policies",
+    "setup:clean": "rm index.js memory.js policies.js *.d.ts",
+    "install": "npm run build && npm run setup"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.3",
+    "@types/node": "^14.6.3",
+    "ts-node": "^9.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3"
+  }
+}
